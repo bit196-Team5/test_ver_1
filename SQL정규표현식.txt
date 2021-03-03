@@ -1,0 +1,7 @@
+REGEXP_LIKE(SAL, '[^[:digit:]]');
+
+REGEXP_LIKE(HP,'^01[0|1|6]-\d{3,4}-\d{4}$'); //핸드폰
+
+REGEXP_REPLACE(ID,'( ){1,}',""); //공백제거
+
+REGEXP_REPLACE(RESNUM,'[0-9]','*',7) // 숫자를 *로..
