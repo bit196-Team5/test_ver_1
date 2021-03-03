@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS복습</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/notosanskr.css" />
+    <style>
+        /*2.폰트적용*/
+        body{
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        /*3.가상클래스 적용*/
+        #box {
+            /*너비,높이*/
+            width: 300px;
+            height: 100px;
+            /*뒷배경색*/
+            background-color: #EF9A9A;
+            /*수직가운데정렬*/
+            line-height: 100px;
+            /*수평가운데정렬*/
+            text-align: center;
+            /*글자크기*/
+            font-size: 30px;
+            /*트랜지션 - 부드럽게처리*/
+            transition: .2s ease-out;
+        }
+        #box:hover {
+            /*트랜스폼 - 크기키우기*/
+            transform: scale(1.1);
+            /*너비,높이*/
+            /*width: 310px;*/
+            /*height: 110px;*/
+            /*수직가운데정렬*/
+            /*line-height: 110px;*/
+            /*수평가운데정렬*/
+            text-align: center;
+            /*뒷배경색*/
+            background-color: #E57373;
+            /*글자색*/
+            color: white;
+            /*글자크기*/
+            font-size: 30px;
+            /*글자굵기*/
+            font-weight: bold;
+            /*마우스커서*/
+            cursor: pointer;
+            /*그림자 효과*/
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        #profile {
+            /*너비,높이*/
+            width: 200px;
+            height: 200px;
+            /*
+                border:테두리선
+                border-color:색상
+                border-width:너비
+                border-style:스타일(solid,dotted,dashed...)
+            */
+            /*테두리*/
+            border: 10px solid dimgray;
+            /*테두리 둥글게 - 이미지너비+테두리너비/2*/
+            border-radius: 105px;
+            /*뒷배경 이미지*/
+            background-image: url(img/profile.jpg);
+            /*
+                * 뒷배경 크기지정 - background-size: x축 y축
+                1) px지정
+                2) % 지정
+                2) cover, contain 지정(요소비율,이미지비율)
+            */
+            background-size: 200px 200px;
+            /*투명도 opacity: 0.0-1*/
+            opacity: .3;
+        }
+        #profile:hover{
+            transition: .3s ease;
+            /*그림자 효과*/
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            /*테두리색*/
+            border-color: #42A5F5;
+            /*투명도*/
+            opacity: 1;
+
+        }
+        img{
+            /*테두리*/
+            border: 10px solid #E57373;
+            /*테두리 둥글게*/
+            border-radius: 200px;
+        }
+    </style>
+</head>
+<body>
+<h1><i class="fa fa-comment" aria-hidden="true"></i> 복습목록</h1>
+<ol>
+    <li><i class="fa fa-battery-empty" aria-hidden="true"></i> 폰트어썸</li>
+    <li><i class="fa fa-battery-quarter" aria-hidden="true"></i> Noto Sans KR 폰트적용</li>
+    <li><i class="fa fa-battery-half" aria-hidden="true"></i> #box에 가상클래스 적용</li>
+    <li><i class="fa fa-battery-full" aria-hidden="true"></i> #profile에 background 적용</li>
+</ol>
+<hr/>
+<div id="box">CSS 복습1</div>
+<hr/>
+<div id="profile"></div>
+<img alt="아이린" width="200" src="img/irene.jpeg" />
+</body>
+</html>
